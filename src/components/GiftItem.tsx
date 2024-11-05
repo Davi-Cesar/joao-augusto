@@ -8,7 +8,7 @@ interface GiftItemProps {
 const GiftItem = ({ gift, onChoose }: GiftItemProps) => {
   return (
     <div
-      className="flex flex-col border relative font-[Rokkit] justify-between bg-center rounded-3xl shadow-lg h-96 w-full text-center text-white bg-cover"
+      className="flex flex-col border relative font-[Rokkit] justify-between bg-center rounded-3xl shadow-lg h-[25rem] w-full text-center text-white bg-cover"
       style={{ backgroundImage: `url(${gift.image})` }}
     >
       {/* <div className="absolute inset-0 bg-black opacity-10 rounded-3xl"></div> */}
@@ -23,9 +23,9 @@ const GiftItem = ({ gift, onChoose }: GiftItemProps) => {
       </div>
       <button
         onClick={() => onChoose(gift)}
-        className="text-white text-lg py-4 px-4 "
+        className="text-white text-lg py-8 px-4 md:px-0 "
       >
-        <div className="flex justify-center items-center  backdrop-blur-[15px] mx-12 py-4 px-4 rounded-full">
+        <div className="flex justify-center items-center backdrop-blur-[15px] mx-12 py-4 px-4 rounded-full">
           <img
             src=" /bear-icon.svg"
             alt="urso de bebÊ"

@@ -3,7 +3,8 @@
       "id": 1,
       "name": "Kit Chupetas",
       "price": 130.00, 
-      "image": "/images/chupeta.jpg"
+      "image": "/images/chupeta.jpg",
+      "link": ""
     },
     {
       "id": 2,

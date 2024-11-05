@@ -23,6 +23,9 @@ const Carrossel = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
+        pagination={{
+          dynamicBullets: true,
+        }}
         scrollbar={{
           hide: false,
         }}

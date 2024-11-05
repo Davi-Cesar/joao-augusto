@@ -92,7 +92,7 @@ const ConfirmacaoGift: React.FC = () => {
           <option value="card">Cartão</option>
         </select>
         {paymentMethod === "pix" && (
-          <div className=" p-4 bg-blue-100 m-2 text-gray-800 rounded-md">
+          <div className=" p-4 bg-slate-300 m-2 text-gray-600 rounded-md">
             <p className="font-semibold">Número do Pix:</p>
             <p>123.456.789-00</p>
           </div>
