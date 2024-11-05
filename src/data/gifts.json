@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "Kit Chupetas",
+      "price": 130.00, 
+      "image": "/images/chupeta.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Canguru bebê",
+      "price": 300.00, 
+      "image": "/images/canguru.webp"
+    },
+    {
+      "id": 3,
+      "name": "Babá Eletrônica",
+      "price": 350.00, 
+      "image": "/images/baba.webp"
+    },
+    {
+      "id": 4,
+      "name": "Bebê conforto",
+      "price": 250.00, 
+      "image": "/images/bebe_conforto.webp"
+    },
+    {
+      "id": 5,
+      "name": "Conjunto de Body",
+      "price": 130.00, 
+      "image": "/images/body.jfif"
+    },
+    {
+      "id": 6,
+      "name": "Saida Marternidade",
+      "price": 300.00, 
+      "image": "/images/saida_maternidade.jfif"
+    },
+    {
+      "id": 7,
+      "name": "3 Calças",
+      "price": 150.00, 
+      "image": "/images/calcas.jfif"
+    },
+    {
+      "id": 8,
+      "name": "Almofada de Amentação",
+      "price": 150.00, 
+      "image": "/images/almofada.webp"
+    },
+    {
+      "id": 10,
+      "name": "Banheira Portátil",
+      "price": 250.00, 
+      "image": "/images/banheira.jfif"
+    }
+  ]
+  

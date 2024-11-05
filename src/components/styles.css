@@ -1,0 +1,33 @@
+#app {
+    height: 100%;
+  }
+ 
+
+  
+  .swiper {
+    width: 100%;
+
+  }
+  .swiper-scrollbar {
+    background-color: #f0f0f0; /* Cor de fundo do contêiner do scrollbar */
+  }
+  
+  /* Estiliza a barra (polegar) do scrollbar */
+  .swiper-scrollbar-drag {
+    background-color: #ff5722; /* Cor da barra do scrollbar */
+    border-radius: 8px; /* Ajusta o arredondamento, se desejar */
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+  
