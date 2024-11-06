@@ -3,14 +3,13 @@
       "id": 1,
       "name": "Kit Chupetas",
       "price": 130.00, 
-      "image": "/images/chupeta.jpg",
-      "link": ""
+      "image": "/images/chupeta.jpg"
     },
     {
       "id": 2,
-      "name": "Canguru bebê",
-      "price": 300.00, 
-      "image": "/images/canguru.webp"
+      "name": "Carrinho",
+      "price": 500.00, 
+      "image": "/images/carrinho.webp"
     },
     {
       "id": 3,
@@ -27,7 +26,7 @@
     {
       "id": 5,
       "name": "Conjunto de Body",
-      "price": 130.00, 
+      "price": 150.00, 
       "image": "/images/body.jfif"
     },
     {
@@ -45,7 +44,7 @@
     {
       "id": 8,
       "name": "Almofada de Amentação",
-      "price": 150.00, 
+      "price": 200.00, 
       "image": "/images/almofada.webp"
     },
     {

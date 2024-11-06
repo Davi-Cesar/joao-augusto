@@ -9,6 +9,7 @@ const ConfirmacaoGift: React.FC = () => {
   const [valueFlap, setValueFlap] = useState<number>(0);
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+
   useEffect(() => {
     const foundGift = giftsData.find((g) => g.id === parseInt(id || "", 10));
     setGift(foundGift || null);
@@ -21,33 +22,24 @@ const ConfirmacaoGift: React.FC = () => {
       setErrorMessage("Por favor, escolha como deseja presentear.");
       return;
     }
-    if (paymentMethod === "pix" && valueFlap !== 0) {
-      const message = `Olá, quero presentear com o item ${
-        gift.name
-      } no valor de R$ ${gift.price + valueFlap} com um pacote de fraldas.`;
-      const whatsappNumber = "558492223000";
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        message
-      )}`;
+    const totalPrice = gift.price + valueFlap;
+    const additionalItem = valueFlap !== 0 ? " com um pacote de fraldas" : "";
+    const addMethodPayment =
+      paymentMethod !== "pix"
+        ? `  💳 Forma ${paymentMethod}.`
+        : `  💵 Forma ${paymentMethod}.`;
+    const message = `Olá, quero presentear com o item ${gift.name} no valor de R$ ${totalPrice}${additionalItem} ${addMethodPayment}`;
+    const whatsappNumber = "558492223000";
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
-      window.location.href = whatsappLink;
-    } else if (paymentMethod === "pix" && valueFlap === 0) {
-      const message = `Olá, quero presentear com o item ${
-        gift.name
-      } no valor de R$ ${gift.price + valueFlap}`;
-      const whatsappNumber = "558492223000";
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        message
-      )}`;
-
-      window.location.href = whatsappLink;
-    }
+    window.location.href = whatsappLink;
   };
 
   return (
     <div className="container flex flex-col mt-4 justify-center items-center text-center">
       <button className="text-left w-full">
-        {" "}
         <Link to={"/"}>
           <img
             src="/arrow.svg"
@@ -72,29 +64,27 @@ const ConfirmacaoGift: React.FC = () => {
         </p>
       </div>
       <form className="max-w-sm mx-auto m-2">
-        <label
-          htmlFor="pays"
-          className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-300"
-        ></label>
         <select
           id="pays"
           defaultValue=""
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#30627E] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-gray-50 border disabled:text-red-300 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-[#30627E] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           onChange={(e) => {
-            setPaymentMethod((e.target as HTMLSelectElement).value);
-            setErrorMessage(""); // Limpa a mensagem de erro ao escolher um método
+            setPaymentMethod(e.target.value);
+            setErrorMessage("");
           }}
         >
           <option value="" disabled>
             Escolha como deseja presentear
           </option>
-          <option value="pix">Pix</option>
+          <option value="pix">
+            <p>Pix</p>
+          </option>
           <option value="card">Cartão</option>
         </select>
         {paymentMethod === "pix" && (
-          <div className=" p-4 bg-slate-300 m-2 text-gray-600 rounded-md">
+          <div className="p-4 bg-slate-200 m-2 text-[#707A87] rounded-md">
             <p className="font-semibold">Número do Pix:</p>
-            <p>123.456.789-00</p>
+            <p>70013633406</p>
           </div>
         )}
         {errorMessage && <p className="text-red-500 mt-2">{errorMessage}</p>}
@@ -104,7 +94,7 @@ const ConfirmacaoGift: React.FC = () => {
             className="sr-only peer"
             onChange={(e) => setValueFlap(e.target.checked ? 30 : 0)}
           />
-          <span className="mr-0 p-2 text-sm font-medium text-left text-gray-600 dark:text-gray-500">
+          <span className="mr-0 p-2 text-sm font-medium text-left text-[#707A87] dark:text-gray-500">
             Adicionar pacote de fralda (+R$ 30,00)
           </span>
           <div className="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-200 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-gray-400 after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-300 peer-checked:bg-blue-600"></div>
@@ -112,7 +102,7 @@ const ConfirmacaoGift: React.FC = () => {
       </form>
       <button
         onClick={handleConfirmChoice}
-        className="bg-[#30627E] text-white font-semibold py-2 px-6 rounded-lg mt-2 hover:bg-[#244f66] transition duration-200"
+        className="bg-[#30627E] text-white font-medium py-2 px-6 rounded-lg mt-2 hover:bg-[#244f66] transition duration-200"
       >
         Confirmar Escolha
       </button>
