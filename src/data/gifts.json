@@ -81,7 +81,7 @@
       "id": 15,
       "name": "Necessaries",
       "price": 150.00, 
-      "image": "/images/necessarie.jpeg"
+      "image": "/images/necessaries.jfif"
     },
     {
       "id": 16,
@@ -90,10 +90,10 @@
       "image": "/images/saquinhos.jpeg"
     },
     {
-      "id": 16,
-      "name": "Saquinhos",
-      "price": 150.00, 
-      "image": "/images/trocador.jpeg"
+      "id": 17,
+      "name": "Enxoval Para Berço",
+      "price": 200.00, 
+      "image": "/images/enxoval.jfif"
     }
   ]
   
