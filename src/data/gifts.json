@@ -52,6 +52,48 @@
       "name": "Banheira Portátil",
       "price": 250.00, 
       "image": "/images/banheira.jfif"
+    },
+    {
+      "id": 11,
+      "name": "Cangurú",
+      "price": 200.00, 
+      "image": "/images/canguru.webp"
+    },
+    {
+      "id": 12,
+      "name": "Kit Fraldas",
+      "price": 130.00, 
+      "image": "/images/fralda.jfif"
+    },
+    {
+      "id": 13,
+      "name": "Kit Mamadeiras",
+      "price": 150.00, 
+      "image": "/images/mamadeira.jfif"
+    },
+    {
+      "id": 14,
+      "name": "Kit Higiene",
+      "price": 130.00, 
+      "image": "/images/higiene.jfif"
+    },
+    {
+      "id": 15,
+      "name": "Necessaries",
+      "price": 150.00, 
+      "image": "/images/necessarie.jpeg"
+    },
+    {
+      "id": 16,
+      "name": "Saquinhos",
+      "price": 130.00, 
+      "image": "/images/saquinhos.jpeg"
+    },
+    {
+      "id": 16,
+      "name": "Saquinhos",
+      "price": 150.00, 
+      "image": "/images/trocador.jpeg"
     }
   ]
   
