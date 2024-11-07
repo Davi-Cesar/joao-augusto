@@ -94,6 +94,12 @@
       "name": "Enxoval Para Berço",
       "price": 200.00, 
       "image": "/images/enxoval.jfif"
+    },
+    {
+      "id": 18,
+      "name": "Macacão",
+      "price": 130.00, 
+      "image": "/images/macacao.jfif"
     }
   ]
   
